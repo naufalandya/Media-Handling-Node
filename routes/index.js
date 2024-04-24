@@ -4,7 +4,7 @@ const { imageStorage, videoStorage, documentStorage, image, video, document } = 
 
 const {imageKitUpload} = require("../controllers/media.controller");
 
-// images
+// imagess
 router.post('/upload/image', imageStorage.single('image'), (req, res) => {
     let imageUrl = `${req.protocol}://${req.get('host')}/images/${req.file.filename}`;
     res.json({ image_url: imageUrl });
