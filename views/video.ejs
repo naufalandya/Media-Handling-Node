@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple Video Upload</title>
+</head>
+<body>
+
+    <h1>satu video</h1>
+<form action="/api/v1/upload/video" method="post" enctype="multipart/form-data">
+    <label for="file">Pilih file:</label>
+    <input type="file" id="file" name="video">
+    <button type="submit">Upload</button>
+</form>
+
+<h1>banyak video</h1>
+
+<form action="/api/v1/upload/videos" method="post" enctype="multipart/form-data">
+    <label for="files">Pilih file:</label>
+    <input type="file" id="files" name="video" multiple>
+    <button type="submit">Upload</button>
+</form>
+
+</body>
+</html>
